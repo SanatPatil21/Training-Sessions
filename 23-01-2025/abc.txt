@@ -1,0 +1,9 @@
+This is a sample text file named abc.txt. It contains some example content to demonstrate reading from the file. 
+Feel free to modify this text as needed.
+
+Line 1: The quick brown fox jumps over the lazy dog.
+Line 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Line 3: The rain in Spain stays mainly in the plain.
+Line 4: To be or not to be, that is the question.
+HEY NAYA LINE
+HEY NAYA LINE
