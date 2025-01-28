@@ -1,0 +1,5 @@
+SQL Query to merge two tables, we have one emp table and one role table defining what should be the max salary of a specific role.
+
+select EMPLOYEE.EID,EMPLOYEE.DESIGNATION ,EMPLOYEE.SALARY  from EMPLOYEE , ROLE
+where EMPLOYEE.DESIGNATION = ROLE.DESIGNATION and EMPLOYEE.SALARY<ROLE.MIN_SALARY;
+
