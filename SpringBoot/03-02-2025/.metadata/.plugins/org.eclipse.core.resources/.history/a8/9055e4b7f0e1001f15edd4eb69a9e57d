@@ -1,0 +1,20 @@
+package mongoDemo;
+
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoDatabase;
+
+public class MongoDBOperations {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017");
+		
+		MongoDatabase database = mongoClient.getDatabase("mydb");
+		
+		
+		System.out.println("Sucessfully Connected");
+
+	}
+
+}

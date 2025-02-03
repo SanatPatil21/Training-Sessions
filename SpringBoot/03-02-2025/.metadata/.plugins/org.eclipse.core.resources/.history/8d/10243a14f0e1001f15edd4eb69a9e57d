@@ -1,0 +1,10 @@
+package mongoDemo;
+
+public class MongoDBOperations {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

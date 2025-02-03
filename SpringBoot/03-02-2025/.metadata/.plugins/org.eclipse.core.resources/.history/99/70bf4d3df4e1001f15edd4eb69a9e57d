@@ -1,0 +1,49 @@
+package mongoDemo;
+
+import org.bson.Document;
+
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+
+public class MongoDBOperations {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017");
+		
+		MongoDatabase database = mongoClient.getDatabase("demodb");
+		
+		MongoCollection<Document> collections = database.getCollection("Employee");
+		
+		/*
+		FindIterable<Document> i = collection.find();
+		
+		for(Document d:i) {
+			System.out.println(d);
+		}
+		
+		
+		*/
+		
+		//Various ways of Inserting a record
+		/*
+		Document doc = new Document();
+		doc.append("name", "Pooja");
+		doc.append("age", 33);
+		doc.append("salary", 33000);
+		doc.append("designation", "Manager");
+		collections.insertOne(doc);
+		
+		*/
+		
+		
+		collections.insertOne(new Document().append("name","Suman").append("age",34).append("salary",33400).append("desgination","Tester"));
+		
+		System.out.println("Sucessfully did the operation on MongoDB");
+		mongoClient.close();
+	}
+
+}
