@@ -34,7 +34,7 @@ class C {
         System.out.println("C ka object created");
     }
 
-    //overridden toString method
+    // overridden toString method
     public String toString() {
         System.out.println("From C class object");
         return "";
