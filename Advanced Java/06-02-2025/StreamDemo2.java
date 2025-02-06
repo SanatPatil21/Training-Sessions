@@ -12,11 +12,16 @@ public class StreamDemo2 {
 		map.put(44, "Pushpa");
 		map.put(55, "Kadu");
 
+
+		//Map can be also converted to Stream, then we can use Stream methods
 		map.entrySet().stream().map(Map.Entry::getKey).forEach(System.out::println);
 		map.entrySet().stream().map(Map.Entry::getValue).forEach(System.out::println);
 		System.out.println("----------------");
 		map.entrySet().stream().filter(me -> me.getKey() > 30).forEach(System.out::println);
 		System.out.println("-----------------");
+
+
+
 
 		List<Integer> l1 = Arrays.asList(1, 2, 3);
 		// List<Integer> l2 = Arrays.asList(4,5,6,7);
@@ -36,7 +41,7 @@ public class StreamDemo2 {
 		List<Collection<Integer>> list = Arrays.asList(l1, l2, l3);
 		System.out.println(list);
 
-		//FlatMap can flatten the List of Lists or List of Collections etc
+		// FlatMap can flatten the List of Lists or List of Collections etc
 		List<Integer> flatList = list.stream()
 				.flatMap(coll -> coll.stream())
 				.map(x -> x + x)
