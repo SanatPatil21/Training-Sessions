@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="junitdemo" project="junitdemo" tests="4" started="4" failures="0" errors="0" ignored="1">
+  <testsuite name="com.CalculatorTest" time="0.0" displayname="Testing Arithmetic Operations" uniqueid="[engine:junit-jupiter]/[class:com.CalculatorTest]">
+    <testcase name="testAdd" classname="com.CalculatorTest" time="0.0" displayname="Testing Addition Operation" uniqueid="[engine:junit-jupiter]/[class:com.CalculatorTest]/[method:testAdd()]"/>
+    <testcase name="testDiv" classname="com.CalculatorTest" time="0.0" displayname="Testing Divison Operation" uniqueid="[engine:junit-jupiter]/[class:com.CalculatorTest]/[method:testDiv()]"/>
+    <testcase name="testMul" classname="com.CalculatorTest" time="0.0" displayname="Testing Multiply Operation" uniqueid="[engine:junit-jupiter]/[class:com.CalculatorTest]/[method:testMul()]"/>
+    <testcase name="test" classname="com.CalculatorTest" time="0.0" ignored="true" displayname="test()" uniqueid="[engine:junit-jupiter]/[class:com.CalculatorTest]/[method:test()]"/>
+  </testsuite>
+</testrun>
