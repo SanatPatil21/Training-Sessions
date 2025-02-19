@@ -16,15 +16,18 @@
 		<!-- Display messages -->
 		<h3 style="color: red;"><%= request.getAttribute("error") != null ? request.getAttribute("error") : "" %></h3>
 		<h3 style="color: green;"><%= request.getAttribute("success") != null ? request.getAttribute("success") : "" %></h3>
-		<h3 style="color: green;"><%= request.getAttribute("message") != null ? request.getAttribute("message") : "" %></h3>
+		<h3 style="color: red;"><%= request.getAttribute("message") != null ? request.getAttribute("message") : "" %></h3>
 
 		<!-- If CID is valid, show password input -->
 		<% if (request.getAttribute("cidValid") != null) { %>
-			<form action="/submit_signup" method="POST">
+			<form action="/submit_signup" method="GET">
 				<input type="hidden" name="cid" value="<%= request.getAttribute("cidValid") %>">
-				Enter Name: <input type="text" name="cname">
-				<br>
+				Enter Name: 	<input type="text" name="cname" 
+				               value="<%= request.getAttribute("nameValue") != null ? request.getAttribute("nameValue") : "" %>">
+				        <br>
 				Enter Password: <input type="password" name="pwd">
+				<br>
+				Confirm Password: <input type="password" name="pwdconfirm">
 				<input type="submit" value="Signup">
 			</form>
 		<% } %>

@@ -1,4 +1,4 @@
-package com.example.demo.models;
+package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -48,9 +48,23 @@ public class NetBankingController {
 	}
 	
 	@RequestMapping("/submit_signup")
-	public String handleSignup(@RequestParam("cid") String cid,@RequestParam("cname") String cname, @RequestParam("pwd") String pwd, Model model) {
-		
-		boolean registered = dbOps.registerUser(Integer.parseInt(cid),cname, pwd);
+	public String handleSignup(@RequestParam String cid,@RequestParam("cname") String cname, @RequestParam("pwd") String pwd,@RequestParam("pwdconfirm") String pwdConfirm, Model model) {
+		if(!pwd.equals(pwdConfirm)) {
+			model.addAttribute("message", "Passwords Do Not Match");
+			model.addAttribute("cidValid", true);
+			model.addAttribute("cidValue", cid);
+			model.addAttribute("nameValue",cname);
+            return "signup.jsp";
+		}
+		int customerId;
+	    try {
+	        customerId = Integer.parseInt(cid);
+	    } catch (NumberFormatException e) {
+	        model.addAttribute("message", "Invalid Customer ID");
+	        return "signup.jsp";
+	    }
+	    
+		boolean registered = dbOps.registerUser(customerId,cname, pwd);
 		
 		if (registered) {
             model.addAttribute("message", "Signup successful! You can now login.");
