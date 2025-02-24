@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code Executor</title>
+</head>
+<body>
+    <h2>Online Code Executor</h2>
+    
+    <label for="code">Enter Java Code:</label><br>
+    <textarea id="code" rows="10" cols="60">public class Main { public static void main(String[] args) { System.out.println("Hello World"); } }</textarea><br>
+
+    <label for="input">Input (Optional):</label><br>
+    <input type="text" id="input"><br><br>
+
+    <button onclick="submitCode()">Run Code</button>
+
+    <h3>Output:</h3>
+    <pre id="output">Waiting for execution...</pre>
+
+    <script>
+        async function submitCode() {
+            const code = document.getElementById("code").value;
+            const input = document.getElementById("input").value;
+
+            // Send code execution request
+            let response = await fetch("http://localhost:8181/api/code/execute", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ code, input })
+            });
+
+            let data = await response.json();
+            console.log("Submission Response:", data);
+
+            if (!data.token) {
+                document.getElementById("output").innerText = "Error: Failed to submit code!";
+                return;
+            }
+
+            // Poll for result using the token
+            let token = data.token;
+            let result = null;
+
+            while (!result || result.status.id <= 2) { // 1 = In Queue, 2 = Processing
+                await new Promise(r => setTimeout(r, 2000)); // Wait 2 seconds before checking again
+                let resultResponse = await fetch(`http://localhost:8080/api/code/result/${token}`);
+                result = await resultResponse.json();
+                console.log("Execution Result:", result);
+            }
+
+            // Display the output
+            document.getElementById("output").innerText = result.stdout || "Error: " + (result.stderr || "Unknown Error");
+        }
+    </script>
+</body>
+</html>
