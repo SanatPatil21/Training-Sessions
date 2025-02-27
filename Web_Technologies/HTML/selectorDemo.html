@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>
+            CSS Selectors
+        </title>
+        <style>
+            p.one{color:red}
+            p.two{color:blue}
+            .three{
+                color:purple
+            }
+            #four{color: brown}
+            span{color: green}
+            span>span{color: lime;
+            background-color: black;}
+            p.pseudo::first-line{
+                color:red;
+            }
+
+            h1::after{
+                content: ', Have a nice day !';
+            }
+            h1::before{
+                content: 'Welcome Mr. ';
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>Reddy</h1>
+        <h1>Singh</h1>
+        <p class="one">This is from First Paragraph</p>
+        <p class="two">This is from Second Paragraph</p>
+        <p class="three">This is from Third Paragraph</p>
+        <p id="four">This is from Fourth Paragraph</p>
+        <div class="three">This comes from Div</div>
+
+        <br>
+        <span>This is from <span>the inner span</span> Span</span><br>
+        <span>This is from Span</span><br>
+        <span>This is from Span</span><br>
+
+
+        <p class="pseudo">This is for Psudo Elements Demo.This is for Psudo Elements Demo.This is for Psudo Elements Demo.This is for Psudo Elements Demo.This is for Psudo Elements Demo.This is for Psudo Elements Demo.</p>
+
+    </body>
+</html>
