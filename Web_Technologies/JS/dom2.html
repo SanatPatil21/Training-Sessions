@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Demo 2</title>
+    <script>
+        var disp = true;
+        
+        function login() {
+            var login = `
+            <h3>Please Login</h3>
+                <form action="dataTypes.html">
+                    Username: <input type="text" name="un" required><br>
+                    Password: <input type="password" name="pw" required><br>
+                    <br>
+                    <input type="submit" value="LOGIN" name="submit">
+                    <input type="reset" value="RESET" name="reset">
+                </form>`
+                
+
+            // console.log(login);
+            if(disp){
+                document.getElementById("d1").innerHTML = login;
+                document.getElementById("s1").style.color = "red";
+                document.getElementById("s1").innerText = "HIDE LOGIN";
+
+            } else{
+                document.getElementById("d1").innerText = "";
+                document.getElementById("s1").innerText = "SHOW LOGIN";
+                document.getElementById("s1").style.color = "blue";
+            }
+            disp=!disp;           
+        }
+    </script>
+</head>
+
+<body>
+    <h1>DOM Demo 2</h1>
+    <hr>
+    <h2 onClick="login()" style="color: blue;" ><span id="s1">SHOW LOGIN</span></h2>
+    <div id="d1">
+    </div>
+    <hr>
+    <h3>THANK YOU</h3>
+
+</body>
+
+</html>
