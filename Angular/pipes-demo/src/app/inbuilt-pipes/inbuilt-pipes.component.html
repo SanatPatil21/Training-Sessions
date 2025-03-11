@@ -1,0 +1,34 @@
+<h2>
+    Inbuilt Pipes
+</h2>
+<hr>
+<h3>
+    <h4>Pipe Operator on String</h4>
+
+    {{str}} <br>
+    {{str|uppercase}} <br>
+    {{str|lowercase}} <br>
+
+    <br>
+    <h4>Pipe Operator on Currency</h4>
+    {{amt|currency:'INR'}}<br>
+    {{amt|currency:'USD'}}<br>
+    {{amt|currency:'JPY'}}<br>
+    {{amt|currency:'SAR'}}<br>
+
+    <br>
+    <h4>Pipe Operator on Date</h4>
+    {{date}}<br>
+    {{date|date:'short'}}<br>
+    {{date|date:'medium'}}<br>
+    {{date|date:'long'}}<br>
+    {{date|date:'full'}}<br>
+    {{date|date:'fullDate'}}<br>
+    {{date|date:'dd/MM/yyyy'}}<br>
+    {{date|date:'dd-MM-yyyy hh:mm:ss'}}<br>
+
+    <br>
+    <h4>Chaining Pipe Operator</h4>
+    {{date|date:'fullDate'|uppercase|slice:0:8}}<br>
+
+</h3>

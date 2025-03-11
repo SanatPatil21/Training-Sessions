@@ -1,0 +1,31 @@
+<h2>Structural Directives Demo</h2>
+
+<h3>
+    <div *ngIf="flag; then do_this else do_other"></div>
+    <hr>
+    <b>SEP</b>
+    <ng-template #do_this>HAVE A GODD DAY</ng-template>
+    <ng-template #do_other>HAVE A GOOD NIGHT</ng-template>
+</h3>
+
+
+<button (click)="toggle()">CLICK TO HIDE</button>
+<h3>
+    List of Fruits
+    <ol>
+        <li *ngFor="let fruit of fruits">
+            {{fruit}}
+        </li>
+    </ol>
+</h3>
+<input #mf>
+<button (click)="addFruit(mf.value)">ADD FRUIT</button>
+<h3>Count: {{count}}</h3>
+<span [ngSwitch]="count">
+    <span *ngSwitchCase="1">ZERO</span>
+    <span *ngSwitchCase="2">ONE</span>
+    <span *ngSwitchCase="3">TWO</span>
+    <span *ngSwitchCase="4">THREE</span>
+    <span *ngSwitchCase="5">FOUR</span>
+</span>
+<button (click)="incrCount()">INCR</button>

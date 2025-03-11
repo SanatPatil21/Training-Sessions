@@ -1,0 +1,39 @@
+<h2>
+    Employee Creation/Updation
+</h2>
+<hr>
+<form #empForm="ngForm" (ngSubmit)="onSubmit(empForm)" >
+    <input type="number" name="eid" placeholder="Enter ID" [(ngModel)]="empService.selectedEmployee.eid"><br>
+    <input type="text" name="name" placeholder="Enter Name" [(ngModel)]="empService.selectedEmployee.name"><br>
+    <input type="number" name="age" placeholder="Enter age" [(ngModel)]="empService.selectedEmployee.age"><br>
+    <input type="number" name="salary" placeholder="Enter salary" [(ngModel)]="empService.selectedEmployee.salary"><br>
+    <input type="text" name="designation" placeholder="Enter Designation" [(ngModel)]="empService.selectedEmployee.designation"><br>
+
+    <!-- BUTTONS TO SUBMIT -->
+    <input type="submit" name="submit" value="SUBMIT">
+    <input type="button" name="reset" value="RESET" (click)="resetForm(empForm)">
+</form>
+
+<br><br>
+<hr>
+<h2>Employee Details</h2>
+<table>
+    <tr>
+        <th>EID</th>
+        <th>NAME</th>
+        <th>AGE</th>
+        <th>SALARY</th>
+        <th>DESIGNATION</th>
+        <th>OPTIONS</th>
+    </tr>
+
+    <tr *ngFor="let emp of empService.employees" >
+        <td>{{emp.eid}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.age}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.designation}}</td>
+        <td><input type="button" value="EDIT"(click)="updateEmp(emp)">
+        <input type="button" value="DELETE" (click)="deleteEmp(emp.eid)"></td>
+    </tr>
+</table>

@@ -1,0 +1,27 @@
+<h2>Attribute Directives Demo</h2>
+
+<h3>
+    <div class = "brdr bg">
+        <h3>JUST FOR DEMO OF ngClass DIRECTIVE</h3>
+    </div>
+    <br>
+    <div [ngClass]="{brdr: brdrColor, bg: bgColor}">
+        This is with ngClass 
+    </div>
+    <button (click)="toggleBorderColor()">BORDER</button>
+    <button (click)="toggleBackgroundColor()">BACKGROUND</button>
+</h3>
+<div>
+    <div [ngStyle]="{'background-color': color}">
+        This is with ngClass 
+    </div>
+    <input type="color" #mc>
+    <button (click)="setColor(mc.value)">SET</button>
+</div>
+
+    
+    
+    
+    
+    
+    
