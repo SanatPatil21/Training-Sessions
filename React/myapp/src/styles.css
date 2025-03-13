@@ -1,0 +1,93 @@
+
+
+/* CALCULATORS */
+.calculators-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.calculators-container h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.calculators-container button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.calculators-container button:hover {
+    background-color: #0056b3;
+}
+
+/* LOAN CALCULATOR */
+.loan-calculator-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.loan-calculator-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.loan-calculator-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.loan-calculator-container form input,
+.loan-calculator-container form select {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.loan-calculator-container form input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.loan-calculator-container form input[type="number"]::-webkit-outer-spin-button,
+.loan-calculator-container form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.loan-calculator-container .error-message {
+    color: red;
+    font-size: 0.9em;
+}
+
+.loan-calculator-container button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    align-self: center;
+}
+
+.loan-calculator-container button:hover {
+    background-color: #0056b3;
+}
+
+.emi-result{
+    color: green;
+}
+
+
+/* DEPOSIT CALCULATOR */
