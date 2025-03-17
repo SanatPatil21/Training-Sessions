@@ -22,6 +22,8 @@ const AddVendor = () => {
         .then((res)=>{
             // console.log(`Vendor Added Sucessfully`,res.data);
             alert(`Vendor Added Sucessfully`);
+            //Reset the form fields
+            setVendor({vendorId:"",vendorName:"",vendorCity:""});
         })
         .catch((err)=>{
             console.log(err);

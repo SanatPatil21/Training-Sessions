@@ -21,7 +21,10 @@ const AddProduct = () => {
         e.preventDefault();
         axios.post("http://localhost:4000/products",product)
         .then((res)=>{
-            console.log(`Product Added Sucessfully`,res.data);
+            // console.log(`Product Added Sucessfully`,res.data);
+            alert(`Product Added Sucessfully`);
+            //Reset the form fields
+            setProduct({vendorId:"",productName:"",productPrice:"",productQuantity:""});
         })
         .catch((err)=>{
             console.log(err);

@@ -1,0 +1,162 @@
+{
+  "products": [
+    {
+      "vendorId": 123,
+      "id": "1",
+      "productName": "Apple Watch Series 8",
+      "productPrice": "43500",
+      "productQuantity": "37",
+      "productImage": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fiplanet.one%2Fproducts%2Fapple-watch-series-8-mnhv3hn-a&psig=AOvVaw3HRPp0Im6Tc3UYnnt_PEMF&ust=1742294204626000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDWhuv1kIwDFQAAAAAdAAAAABAE"
+    },
+    {
+      "vendorId": 123,
+      "id": "3",
+      "productName": "Charger",
+      "productPrice": 250,
+      "productQuantity": 19
+    },
+    {
+      "vendorId": 124,
+      "id": "4",
+      "productName": "Apple Watch Series 8",
+      "productPrice": "45000",
+      "productQuantity": 30
+    },
+    {
+      "vendorId": 123,
+      "id": "42ad",
+      "productName": "Chips",
+      "productPrice": "25",
+      "productQuantity": "100"
+    },
+    {
+      "id": "54c0",
+      "vendorId": "126",
+      "productName": "Bottle",
+      "productPrice": "75",
+      "productQuantity": "20"
+    },
+    {
+      "id": "643f",
+      "vendorId": "181212",
+      "productName": "Foosball Table",
+      "productPrice": "25000",
+      "productQuantity": 9
+    },
+    {
+      "id": "0c6d",
+      "vendorId": "181212",
+      "productName": "Apple Type C Earbuds",
+      "productPrice": "5000",
+      "productQuantity": "10"
+    },
+    {
+      "id": "ce78",
+      "vendorId": "181212",
+      "productName": "Apple Watch Series 8",
+      "productPrice": "24000",
+      "productQuantity": 4,
+      "productImage": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fiplanet.one%2Fproducts%2Fapple-watch-series-8-mnhv3hn-a&psig=AOvVaw3HRPp0Im6Tc3UYnnt_PEMF&ust=1742294204626000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDWhuv1kIwDFQAAAAAdAAAAABAE"
+    }
+  ],
+  "vendors": [
+    {
+      "vendorId": 123,
+      "vendorName": "Madhav Retails",
+      "vendorCity": "Mumbai",
+      "vendorRatings": 4.5,
+      "id": "8f35"
+    },
+    {
+      "id": "0383",
+      "vendorId": "124",
+      "vendorName": "Apple INC",
+      "vendorCity": "Mumbai",
+      "vendorRatings": "4.3"
+    },
+    {
+      "id": "997d",
+      "vendorId": "181212",
+      "vendorName": "Rajput Rifles",
+      "vendorCity": "Jalgaon",
+      "vendorRatings": "4.3"
+    }
+  ],
+  "orders": [
+    {
+      "id": "b8b2",
+      "userId": "123",
+      "product": {
+        "id": "ce78",
+        "vendorId": "181212",
+        "productName": "Apple Watch Series 8",
+        "productPrice": "24000",
+        "productQuantity": "5",
+        "productImage": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fiplanet.one%2Fproducts%2Fapple-watch-series-8-mnhv3hn-a&psig=AOvVaw3HRPp0Im6Tc3UYnnt_PEMF&ust=1742294204626000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDWhuv1kIwDFQAAAAAdAAAAABAE"
+      },
+      "orderDate": "2025-03-17T11:25:10.005Z"
+    },
+    {
+      "id": "d269",
+      "userId": "113",
+      "productId": "3",
+      "vendorId": 123,
+      "orderDate": "2025-03-17T11:28:46.896Z"
+    },
+    {
+      "id": "f45c",
+      "userId": "112",
+      "productId": "3",
+      "vendorId": 123,
+      "orderDate": "2025-03-17T11:29:18.724Z"
+    },
+    {
+      "id": "a9f5",
+      "userId": "1",
+      "productId": "3",
+      "vendorId": 123,
+      "orderDate": "2025-03-17T11:29:36.163Z"
+    },
+    {
+      "id": "9e3a",
+      "userId": "126",
+      "productId": {
+        "vendorId": 123,
+        "id": "3",
+        "productName": "Charger",
+        "productPrice": 250,
+        "productQuantity": 20
+      },
+      "orderDate": "2025-03-17T11:33:47.234Z"
+    },
+    {
+      "id": "36a0",
+      "userId": "123",
+      "productId": {
+        "vendorId": 123,
+        "id": "3",
+        "productName": "Charger",
+        "productPrice": 250,
+        "productQuantity": 20
+      },
+      "orderDate": "2025-03-17T11:34:07.760Z"
+    },
+    {
+      "id": "2bbf",
+      "userId": "001",
+      "productId": {
+        "vendorId": 123,
+        "id": "3",
+        "productName": "Charger",
+        "productPrice": 250,
+        "productQuantity": 20
+      },
+      "orderDate": "2025-03-17T11:34:32.248Z"
+    },
+    {
+      "id": "0a70",
+      "userId": "001",
+      "orderDate": "2025-03-17T11:34:57.536Z"
+    }
+  ]
+}

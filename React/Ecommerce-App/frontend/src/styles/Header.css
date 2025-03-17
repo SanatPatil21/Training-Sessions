@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #c5efcb;
+}
+.container .title{
+    padding-left: 20px;
+}
+.links-container {
+    display: flex;
+    gap: 15px;
+    padding-right: 30px;
+}
+
+.links-container .link {
+    text-decoration: none;
+    color: #333;
+    font-size: larger;
+    /* font-weight: bold; */
+    transition: color 0.3s ease;
+}
+
+.links-container .link:hover {
+    color: #007bff;
+}
+

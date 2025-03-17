@@ -3,6 +3,7 @@ import Greet from "./Greet"
 import Counter from "./Counter";
 import Welcome from "./Welcome";
 import Calculators from "./Calculators"
+import Effect from "./Effect";
 
 
 function App() {
@@ -27,7 +28,9 @@ function App() {
       <Counter/>
       <Welcome/>
       */}
-      <Calculators/>
+      {/* <Calculators/> */}
+
+      <Effect/>
     </div>
   );
 }
